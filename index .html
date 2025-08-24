@@ -1,7 +1,190 @@
-<h1> welcome to git hub </h1>
-<h1> root file rm </h1>
-<h2> git repo commite</h2>
-<h2> ubuntu- sudo apt install git </h2>
-<h3> git clone url </h3>
-<h3> /var/www/html/ -ls</h3>
-<h3> restart nginx </h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .login-container {
+      background: #fff;
+      width: 360px;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
+    .login-container img.logo {
+      width: 175px;
+      margin-bottom: 20px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      margin-top: 8px;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      background-color: #fafafa;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 16px;
+      color: #999;
+    }
+
+    .forgot-password {
+      text-align: right;
+      font-size: 12px;
+      margin: 6px 0 16px;
+    }
+
+    .forgot-password a {
+      color: #00376b;
+      text-decoration: none;
+    }
+
+    button.login-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: #0095f6;
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    .divider::before {
+      margin-right: 10px;
+    }
+
+    .divider::after {
+      margin-left: 10px;
+    }
+
+    .facebook-login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #385185;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+      margin-top: 10px;
+      gap: 8px;
+    }
+
+    .facebook-login img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .signup-box {
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      border-top: none;
+      padding: 20px;
+      margin-top: 10px;
+      width: 360px;
+      text-align: center;
+      font-size: 14px;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .signup-box a {
+      color: #0095f6;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png" alt="Instagram" class="logo">
+
+    <form>
+      <div class="input-group">
+        <input type="text" placeholder="Phone number, username or email address" required>
+      </div>
+
+      <div class="input-group">
+        <input type="password" placeholder="Password" id="password" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="forgot-password">
+        <a href="#">Forgotten password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">Log In</button>
+
+      <div class="divider">OR</div>
+
+      <div class="facebook-login">
+        <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+        <span>Log in with Facebook</span>
+      </div>
+    </form>
+  </div>
+
+  <div class="signup-box">
+    Don't have an account? <a href="#">Sign Up</a>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const input = document.getElementById("password");
+      const type = input.getAttribute("type") === "password" ? "text" : "password";
+      input.setAttribute("type", type);
+    }
+  </script>
+</body>
+</html>
